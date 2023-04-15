@@ -4,29 +4,29 @@ import config from "./config";
 const client = new KuCoin(config.apiKey, config.apiSecret, config.passPhrase);
 
 const pricePrecision = {
-  BTC-USDT: 1,
-  ETH-USDT: 2,
-  XRP-USDT: 4,
-  LINK-USDT: 3,
-  GMT-USDT: 4,
-  DAR-USDT: 3,
-  REEF-USDT: 6,
-  DUSK-USDT: 5,
-  APE-USDT: 3,
-  MKR-USDT: 1,
+  "BTC-USDT": 1,
+  "ETH-USDT": 2,
+  "XRP-USDT": 4,
+  "LINK-USDT": 3,
+  "GMT-USDT": 4,
+  "DAR-USDT": 3,
+  "REEF-USDT": 6,
+  "DUSK-USDT": 5,
+  "APE-USDT": 3,
+  "MKR-USDT": 1,
 };
 
 const contractPrecision = {
-  BTC-USDT: 3,
-  ETH-USDT: 3,
-  XRP-USDT: 1,
-  LINK-USDT: 2,
-  DAR-USDT: 1,
-  REEF-USDT: 0,
-  DUSK-USDT: 0,
-  APE-USDT: 0,
-  GMT-USDT: 0,
-  MKR-USDT: 3,
+  "BTC-USDT": 3,
+  "ETH-USDT": 3,
+  "XRP-USDT": 1,
+  "LINK-USDT": 2,
+  "DAR-USDT": 1,
+  "REEF-USDT": 0,
+  "DUSK-USDT": 0,
+  "APE-USDT": 0,
+  "GMT-USDT": 0,
+  "MKR-USDT": 3,
 };
 
 export const handleWebhook = async (req, res) => {
