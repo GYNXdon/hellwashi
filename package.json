@@ -1,0 +1,16 @@
+{
+  "name": "my-auto-trader",
+  "version": "1.0.0",
+  "description": "An auto-trading bot using KuCoin APIs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.1",
+    "kucoin-node-sdk": "^1.1.8"
+  }
+}
