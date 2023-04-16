@@ -1,6 +1,6 @@
 import express, { json } from "express";
 import bodyParser from "body-parser";
-import { handleWebhook } from "./handleWebhook.js";
+import { handleWebhook } from "./handleWebhook.mjs";
 
 const app = express();
 
