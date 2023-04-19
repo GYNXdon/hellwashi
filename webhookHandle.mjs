@@ -1,5 +1,6 @@
 import config from "./config.js";
 import Kucoin from 'kucoin-node-sdk';
+import client from 'kucoin-node-sdk';
 /** Require SDK */
 import API from 'kucoin-node-sdk';
 
@@ -62,15 +63,12 @@ export const handleWebhook = async (req, res) => {
       return res.json({ message: "ok" });
     }
 
-    //When Tradingview sends alert, we will get the order contracts sent from Tradingview
-    //We use this quanity to open position in Binance
-    //we also need to change the contract precision because the one got from TV is different for Binnace
-    let quantity: Number(
-      Number(alert.strategy.order_contracts).toFixed(
-        contractPrecision[alert.symbol]
-      )
-    ),
-    
+ 
+    // When Tradingview sends an alert, we will get the order contracts sent from Tradingview
+    // We use this quantity to open a position in KuCoin
+   // We also need to change the contract precision because the one got from TV is different for KuCoin
+    let quantity = Number(alert.order.contracts).toFixed(contractPrecision[alert.symbol]);
+
 
     //Get the take profit price from Tradingview order
     const take_profit_price: Number(
